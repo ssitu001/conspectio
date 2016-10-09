@@ -1,4 +1,6 @@
 //refactored broadcast.js to a class constructor
+import conspectioBroadcasterClient from './conspectioBroadcasterClient';
+conspectioBroadcasterClient();
 var globalStream;
 var connections = {};
 
@@ -137,6 +139,7 @@ sendEventTag = () => {
   if(eventTag.length) {
     $('#startButton').prop('disabled', true);
     $('#stopButton').prop('disabled', false);
+    
     socket.emit('sendEventTag', eventTag);
 
     var video = $('#broadcastStream')[0];
