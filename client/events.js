@@ -14,7 +14,7 @@ displayEventList = (eventList) => {
   console.log('inside displayEventList');
   $('#eventList').append('<ul>');
   eventList.forEach((event) => {
-    $('#eventList').append(`<li><a href = 'viewer.html?tag=${event}'>${event}</a></li>`);
+    $('#eventList').append(`<a href = 'viewer.html?tag=${event}'><span class="label label-default">${event}</span></a>`);
   });
 	$('#eventList').append('</ul>');
 };

@@ -9,24 +9,36 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   
 </head>
-<body>
+<body id = "broadcastbody">
 	<div>
-    <a href = 'index.html'><button>Home</button></a>
+    <a href = 'index.html'><button><span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+</button></a>
   </div>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="caption">
+          <h3>Broadcast to the World!</h3>
+          <p>Simply type in your event name and hit start!</p>
+        </div>
+        <div>
+          <input id = 'eventTag' type = 'text' placeholder = 'tag your stream here'>
+          <input id = 'startButton' class = "btn btn-success btn-sm" type = 'submit' value = 'start' onclick = 'sendEventTag()'>
+          <input id = 'stopButton' class = "btn btn-danger btn-sm" type = 'submit' value = 'stop' onclick = 'stopStream()' disabled>
+        </div>
+        <div id = 'videoContainer'>
+          <video id = 'broadcastStream' autoplay='true'></video>
+        </div>
+        <div id = 'broadcastMsg'>
+        </div>
+    </div>
+  </div>
+</div>
+
 
   
 
-  <div id = 'videoContainer'>
-    <video id = 'broadcastStream' autoplay='true'></video>
-  </div>
-  <div id = 'errorMsg'>
-  </div>
-  
-  <div>
-    <input id = 'eventTag' type = 'text' placeholder = 'tag your stream here'>
-  	<input id = 'startButton' class = "btn btn-success" type = 'submit' value = 'start' onclick = 'sendEventTag()'>
-  	<input id = 'stopButton' class = "btn btn-danger" type = 'submit' value = 'stop' onclick = 'stopStream()' disabled>
-  </div>
 
   <script src='/socket.io/socket.io.js'></script>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>

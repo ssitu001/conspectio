@@ -118,6 +118,7 @@ sendEventTag = () => {
     socket.emit('sendEventTag', eventTag);
 
     var video = $('#broadcastStream')[0];
+    var message = $('#broadcastMsg');
      
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
      
@@ -129,6 +130,10 @@ sendEventTag = () => {
       let eventTag = $('#eventTag').val();
       globalStream = stream;
       video.src = window.URL.createObjectURL(stream);
+
+      message.empty();
+      message.append(`<h4>You are now broadcasting to event: ${eventTag}</h4>`)
+      eventTag = $('#eventTag').val('');
     }
      
     function videoError(e) {
@@ -152,6 +157,9 @@ stopStream = () => {
     delete connections[conspectioBroadcasterId];
   }
   socket.emit('removeBroadcaster', eventTag);
+  $('#broadcastMsg').empty();
+  $('#broadcastMsg').html(`<h4>You have stopped streaming</h4>`);
+
 };
 
 

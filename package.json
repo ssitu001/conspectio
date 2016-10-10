@@ -1,5 +1,5 @@
 {
-  "name": "conspectio",
+  "name": "conspectio-test",
   "version": "1.0.0",
   "description": "library that facilitates many-to-many live stream broadcasts",
   "main": "index.js",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/productdana/conspectio#readme",
   "dependencies": {
     "chai": "^3.5.0",
+    "conspectio": "^1.0.0",
     "express": "^4.14.0",
     "mocha": "^3.1.0",
     "path": "^0.12.7",
