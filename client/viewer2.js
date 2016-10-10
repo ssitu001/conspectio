@@ -60,7 +60,13 @@ class ConspectioViewer {
         'autoplay': true,
         'id': this.broadcasterId.slice(2)
       });
-    $('#videosDiv').append(video);
+      //console.log('video', video)
+      var responsiveGrid = $('<div class = "col-xs-6"></div>');
+      var videoDiv = $('<div id="videosDiv"></div>')
+      var videoDivVideo = videoDiv.append(video);
+      var responsiveGridvideoDivVideo = responsiveGrid.append(videoDivVideo)
+
+    $('.viewergridrow').append(responsiveGridvideoDivVideo);
   }
 
   handleRemoteStreamRemoved(event) {

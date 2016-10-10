@@ -30,21 +30,23 @@
   /*border: 1px solid #1E824C;*/
   border-radius: 10px;
   width: 100%;
-  /*height: 100%;*/
+  height: 100%;
 }
 
-#videosDiv {
+#videosDiv, .caption, #broadcasterinputs, .row {
   text-align: center;
+  /*width: 100%;*/
+}
+
+.viewergridrow {
+  margin-top: 10%;
 }
 
 .newVideo {
   border: 1px solid #6C7A89;
   border-radius: 10px;
-  width: 40%;
-}
-/*
-#broadcast1 {
-  border: 1px solid black;
   width: 100%;
-}*/
+  height: 100%;
+}
+
 
