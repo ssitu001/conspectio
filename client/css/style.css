@@ -1,6 +1,6 @@
 
 .jumbotron {
-  margin-top: 40%;
+  margin-top: 10%;
 }
 
 #broadcastbody, #viewerbody, #eventbody, .thumbnail {
@@ -33,7 +33,7 @@
   /*height: 100%;*/
 }
 
-#videosDiv, #indexbuttons {
+#videosDiv {
   text-align: center;
 }
 
