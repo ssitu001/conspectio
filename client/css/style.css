@@ -4,10 +4,20 @@
   opacity: 0.5;
 }*/
 
+.jumbotron {
+  margin-top: 40%;
+}
 
-#broadcastbody, #viewerbody, #eventbody, .thumbnail, #eventTag {
+#broadcastbody, #viewerbody, #eventbody, .thumbnail {
   background-color: #ECECEC;
   border: none;
+}
+
+#eventTag {
+ background-color: #DADFE1;
+ border-radius: 5px;
+ height: 35px;
+ outline: none;
 }
 
 #videoContainer {
@@ -28,12 +38,12 @@
   /*height: 100%;*/
 }
 
-#videosDiv {
+#videosDiv, #indexbuttons {
   text-align: center;
 }
 
 .newVideo {
-  border: 1px solid #E4F1FE;
+  border: 1px solid #6C7A89;
   border-radius: 10px;
   width: 40%;
 }
