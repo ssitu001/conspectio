@@ -1,8 +1,3 @@
-/*.landing {
-  background-image: url("../img/landing.jpg");
-  background-size: cover;
-  opacity: 0.5;
-}*/
 
 .jumbotron {
   margin-top: 40%;
@@ -47,9 +42,9 @@
   border-radius: 10px;
   width: 40%;
 }
-
+/*
 #broadcast1 {
   border: 1px solid black;
   width: 100%;
-}
+}*/
 
