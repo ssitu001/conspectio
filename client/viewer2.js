@@ -70,10 +70,10 @@ class ConspectioViewer {
   }
 
   handleRemoteStreamRemoved(event) {
-    console.log('broadcaster stream removed');
+    console.log('broadcaster stream removed', this.broadcasterId);
     //remove stream video tag
 
-    $('#' + this.broadcasterId).remove();
+    // $('#' + this.broadcasterId).parent().parent().remove();
   }
 
   handleIceConnectionChange() {
@@ -110,9 +110,9 @@ class ConspectioViewer {
   
   closeWrapper() {
     this.pc.close();
-    //remove stream video tag
-    $('#' + this.broadcasterId.slice(2)).remove();
     console.log('broadcaster stream removed from closewrapper');
+    //remove stream video tag
+    $('#' + this.broadcasterId.slice(2)).parent().parent().remove();
   }
 }
 
